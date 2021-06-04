@@ -1,0 +1,195 @@
+/* Text styles */
+
+    #map
+    {
+        height: 400px;
+        width: 100%;
+    }
+
+    body
+    {
+        background-color: #f5f4ef;
+    }
+
+    .loader
+    {
+        position:absolute;
+        left: 30%;
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db66; /* Blue */
+        border-right: 16px solid #3498dbCC;
+        border-bottom: 16px solid #3498db;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    h1
+    {
+        padding: 5px 0px;
+        margin-left: -20px;
+        color: #990000;
+    }
+
+    h2
+    {
+        margin-left: -15px;
+        text-decoration: underline;
+    }
+
+    h3
+    {
+        margin-left: -10px;
+    }
+
+    .mainTitle
+    {
+        background-color: #8E8D8A;
+        margin-bottom: 1rem;
+        position: fixed;
+        margin-top: -60px;
+        width: 100%;
+        max-width: 1130px;
+        height: 60px;
+    }
+
+    .mainNavList
+    {
+        font-size: 20px;
+        list-style-type: none;
+        margin-top: 5px;
+        margin-right: 5px;
+        padding: 5px;
+        float:right;
+        background-color: #E98074;
+        border-right: 1px solid;
+    }
+
+    .Navdropdown
+    {
+        float: right;
+        margin-top: 11px;
+        margin-right: 11px;
+    }
+
+    #dropdownMenuButton
+    {
+        background-color: #E98074;
+        color: black;
+    }
+
+    .sideNavList
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 5px 5px;
+        width: 130px;
+        background-color: #D8C3A5;
+        height: 100%;
+        position: fixed;
+        overflow: auto;
+    }
+
+    li a
+    {
+        display: block;
+        padding: 5px;
+        color: black;
+    }
+
+    li a:hover
+    {
+        background-color: #E85A4F;
+        color: white;
+    }
+
+    .active
+    {
+        background-color: #E98074;
+        color: white;
+    }
+
+    .card
+    {
+        max-width: 30rem;
+        opacity: 0.7;
+    }
+
+    .card:hover
+    {
+        opacity: 1;
+    }
+
+    .btn btn-primary
+    {
+        width: 90%;
+        height: 100px;
+    }
+
+    codeSnippet
+    {
+        margin-left: 40px;
+        padding: 20px 30px;
+        color: yellow;
+        background-color: black;
+        display: block;
+        overflow: auto;
+    }
+
+    pre code
+    {
+        margin-left: 40px;
+        padding: 20px 30px;
+        color: yellow;
+        background-color: black;
+        display: block;
+        overflow: auto;
+    }
+
+    exampleText
+    {
+        background-color: pink;
+        color: blue;
+    }
+
+    #exampleID
+    {
+        background-color: purple;
+        color: white;
+    }
+
+    code
+    {
+        background-color: black;
+        padding: 2px;
+
+    }
+
+    ol
+    {
+        color: #34eb7d;
+        background-color: white;
+    }
+
+    .card-img-top
+    {
+        padding: 10px;
+    }
+
+
+/* Major styles */
+
+    .content
+    {
+        background-color: #f5f4ef;
+        margin-top: 60px;
+        margin-left: 130px;
+        padding: 0px 30px;
+        max-width: 1000px;
+    }

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <!-- change the below line of code to include a number in content to make the page auto-refresh for testing -->
+        <!-- <meta http-equiv="refresh" content="1"> -->
+        <title>Sam's Reference Page</title>
+
+    </head>
+    <body>
+
+        <!-- Top bar on page -->
+        <header>
+            <div class="mainTitle">
+                    <a style="margin-left: 30px;" href="/index.html"><h1 style="display: inline">Sam's Homepage</h1></a>
+                    <div class="Navdropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/index.html">Home</a>
+                            <a class="dropdown-item" href="/reference.html">Reference</a>
+                            <a class="dropdown-item" href="/location.html">Location</a>
+                            <a class="dropdown-item" href="/lookup.html">Look Up</a>
+                        </div>
+                    </div>
+            </div>
+
+            <div>
+                <ul class="sideNavList">
+                    <li style="font-size: 90%;"><b>Page Navigation</b></li>
+                    <li class="active"><a href="#">Reference</a></li>
+                    <li><a href="#Csection">C</a></li>
+                    <li><a href="#Pythonsection">Python</a></li>
+                    <li><a href="#SQLsection">SQL</a></li>
+                    <li><a href="#JSsection">Java Script</a></li>
+                    <li><a href="#HTMLsection">HTML</a></li>
+                    <li><a href="#CSSsection">CSS</a></li>
+                </ul>
+            </div>
+
+
+        </header>
+
+
+        <div class="content">
+
+            <h1>Reference Guide</h1>
+
+                <p>This page is intended to act as a visual reminder of the key things to remember in various "languages" to jog your memory when swapping from one to the other.</p>
+
+            <h2 id="Csection">C Reference</h2>
+
+                <p>This section refers to key C things to remember.</p>
+                <p>To be populated at a later date!</p>
+
+            <h2 id="Pythonsection">Python Reference</h2>
+
+                <p>This section refers to key Python things to remember.</p>
+                <p>To be populated at a later date!</p>
+
+            <h2 id="SQLsection">SQL Reference</h2>
+
+                <p>This section refers to key SQL things to remember.</p>
+                <p>To be populated at a later date!</p>
+
+            <h2 id="JSsection">Java Script Reference</h2>
+
+                <p>This section refers to key JavaScript things to remember.</p>
+
+                <p>Javascript can be included in a HTML webpage either:</p>
+                <ul>
+                    <li>Including <code>&lt;script&gt;...code here...&lt;/script&gt;</code> in the <code>&lt;head&gt;</code> part of the html file.</li>
+                    <li>Including <code>&lt;script&gt;...code here...&lt;/script&gt;</code> in the <code>&lt;body&gt;</code> part of the html file.</li>
+                    <li>Or by referring to a separate .js file by including <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> in the body; note that there is nothing between the tags in this instance.</li>
+
+                </ul>
+
+                Comments & Variables:
+<pre><code>// Comments in Javascript are made with two backslashes and only apply to this line.
+// Each new line of comment needs a new pair of backslashes.
+let counter = 0;
+counter = counter + 1;
+counter += 1;
+counter++;</code></pre>
+
+                Conditionals:
+<pre><code>if (x &lt; y)
+{
+    ...
+}
+else if (x &gt; y)
+{
+    ...
+}
+else
+{
+    ...
+}</code></pre>
+
+                Loops:
+<pre><code>while (true)
+{
+    ...
+}
+
+for (let i = 0; i &lt; 3; i++)
+{
+    ...
+}</code></pre>
+
+                To define a function in Javascript:
+<pre><code>function greet()
+{
+    let name = document.querySelector('#name').value;
+    alert('hello, ' + name);
+}</code></pre>
+
+                <p>The above would take the variable "name" and display this as part of a pop-up alert.</p>
+
+                You can use Event Listeners to "listen" for user actions. For example:<br/>
+<pre><code>function listen()
+{
+    document.querySelector('form').addEventListener('submit', greet);
+}
+    document.addEventListener('DOMContentLoaded', listen);</code></pre>
+
+                <p>The above will wait until the page is loaded, then take input from the form on the page and then runs a function called greet.</p>
+
+                You can also use anonymous functions (when a function is only going to be used once) as follows within the script/head:
+<pre><code>document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('form').addEventListener('submit', function () {
+            let name = document.querySelector('#name').value;
+            alert('hello, ' + name);
+        });
+    });
+</code></pre>
+
+                <p>The above is calling an anonymous or Lambda function, that includes two functions (which were previously seperated out into Listen and greet).</p>
+
+                <p>All kinds of events can be listened for, including (but not limited to!) things like click, drag, focus, keyup, mousedown, mouseover etc.</p>
+
+
+            <h2 id="HTMLsection">HTML Reference</h2>
+
+                <p>This section refers to key HTML things to remember.</p>
+
+            <h3>HTML Headings</h3>
+
+                <p>This section will look bizzare, becaused it includes examples of headings... therefore the headings in this section have their margins manually set to zero instead of following the same margin position as <i>actual</i> headings.</p>
+                <h1 style="margin-left: 0px;">Example of a h1 heading</h1>
+                Text within heading. HTML used: <code>&lt;h1&gt;...&lt;/h1&gt;</code>.
+                <h2 style="margin-left: 0px">Example of a h2 heading</h2>
+                Text within heading. HTML used: <code>&lt;h2&gt;...&lt;/h2&gt;</code>.
+                <h3 style="margin-left: 0px">Example of a h3 heading</h3>
+                Text within heading. HTML used: <code>&lt;h3&gt;...&lt;/h3&gt;</code>.
+                <h4>Example of a h4 heading</h4>
+                Text within heading. HTML used: <code>&lt;h4&gt;...&lt;/h4&gt;</code>.
+                <h5>Example of a h5 heading</h5>
+                Text within heading. HTML used: <code>&lt;h5&gt;...&lt;/h5&gt;</code>.
+                <h6>Example of a h6 heading</h6>
+                Text within heading. HTML used: <code>&lt;h6&gt;...&lt;/h6&gt;</code>.
+
+                <br/>
+
+            <h3>HTML Text Formatting</h3>
+
+            <p><span style="color: red;">Example of coloured text</span>. Specicic to this text only, not using a standardised style. HTML used: <code>&lt;span style="color:red;"&gt;...&lt;/span&gt;</code>. Where "span" encloses the text that is to be specifically formatted.</p>
+            <p><u>Example of underlined text</u>. HTML used: <code>&lt;u&gt;...&lt;/u&gt;</code></p>
+            <p><b>Example of bold text</b>. HTML used: <code>&lt;b&gt;...&lt;/b&gt;</code></p>
+            <p><i>Example of italics text</i>. HTML used: <code>&lt;i&gt;...&lt;/i&gt;</code></p>
+
+            <h3>HTML symbols etc</h3>
+            <p>While typing in HTML you may intend an &amp; or &lt; for example to appear in the text, but as these elements have "code" meanings in HTML you cannot simply type these symbols.</p>
+            <p>For an &amp; to appear, you must type <code>&amp;amp;</code>.  For &gt; to appear you must type <code>&amp;gt;</code>.  For &lt; to appear you must type <code>&amp;lt;</code>.</p>
+            <p>You must remember to <b>terminate these items with a semicolon ';'</b>.</p>
+
+
+            <h3>HTML Paragraphs and breaks</h3>
+
+            <p>To move to new line within the same paragraph or section, use <code>&lt;br /&gt;</code>. Although using <code>&lt;br&gt;</code> and <code>&lt;/br&gt;</code> on their own also seem to do the same thing.  According to <a href="https://www.tutorialspoint.com/What-is-the-correct-way-of-using-br-br-or-br-in-HTML#:~:text=In%20HTML%2C%20the,is%20used%20for%20line%20break.&text=In%20HTML%2C%20use,example%2C%20.">this</a> article using <code>&lt;br&gt;</code> is perfectly fine in HTML, however the / variants should be used for XHTML. So you should use <code>&lt;br/&gt;</code> for flexibility.</p>
+            <p>To add in a line break, with a whole clear line, use: <code>&lt;br&gt;&lt;/br&gt;</code></p>
+            <p>To add extra spaces (as HTML will ignore multiple spaces in text), you can use <code>&amp;nbsp</code> or you can use <code>&amp;#160</code> instead. Two spaces can be inserted with <code>&amp;ensp;</code> and four spaces inserted with <code>&amp;emsp;</code>.</p>
+
+            <h3>HTML Forms</h3>
+                <p>
+                Forms can be created by using <code>&lt;form&gt;...&lt;/form&gt;</code> followed by details of the form itself, such as:<br/>
+<pre><code>&lt;form&gt;
+    &lt;input id="name" placeholder="What's your name?" type="text"&gt;
+    &lt;input type="submit" value="Say hello to me!"&gt;
+&lt;/form&gt;</code></pre>
+
+                The above code will produce the below form (which is a dummy only):
+                <form>
+                    <input id="name" placeholder="What's your name?" type="text">
+                    <input type="submit" value="Say hello to me!">
+                </form>
+                <br/>
+                <p>We can use the form to interact with Client side Javascript functions, for example:</p>
+<pre><code>&lt;form onsubmit="greet(); return false;"&gt;
+    &lt;input id="name" type="text"&gt;
+    &lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre>
+                <p>The above would need a javascript function to be defined; but would run the function then do nothing else (return false).</p>
+
+            <h3>HTML Tools</h3>
+                <p>You can make a page automatically refresh at a defined time interval using the below code:</p>
+<pre><code>&lt;meta http-equiv="refresh" content="2"&gt;</code></pre>
+                <p>Where in the above example the page will refresh every 2 seconds.</p>
+
+                <br/>
+
+            <h2 id="CSSsection">CSS Reference</h2>
+                <p>This section refers to key CSS things to remember.</p>
+
+            <p>Use the following code within the 'head' of the webpage to take formatting from a separate CSS file instead of simply from within the HTML file. <code>&lt;link href="styles.css" rel="stylesheet"&gt;</code></p>
+            <p><code>Example of text as a Tag styled from the styleheet</code>. HTML used: <code>&lt;code&gt;...&lt;/code&gt;</code>. Included in the stylesheet as simply:<br />
+                <pre><code>code<br />{<br />    color:....;<br />}</code></pre>
+
+            <p>Example of text as a Class styled from the stylesheet. HTML used: <code>&lt;class="exampleClass"&gt;</code>. Included in the stylesheet as </p>
+                <pre><code>.exampleClass<br />{<br />    color: ....;<br />    background-color: ....;<br />}</code></pre>
+            <p>You can use multiple classes grouped together.</p>
+
+             <p><span id="exampleID">Example of text as a ID styled from the stylesheet</span>. HTML used: <code>&lt;id="exampleID"&gt;</code>. Included in the stylesheet as </p>
+                <pre><code>#exampleID<br />{<br />    color: ....;<br />    background-color: ....;<br />}</code></pre>
+
+        </div>
+
+    </body>
+</html>
