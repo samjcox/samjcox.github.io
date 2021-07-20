@@ -25,3 +25,30 @@ body {
     width: 120px;
     margin: 3px;
 }
+
+.main_header_link {
+    color: white;
+    text-decoration: none;
+}
+.main_header_link:hover {
+    color: white;
+}
+
+.footer-link {
+    color: grey;
+    text-decoration: none;
+    font-size: 80%
+}
+.footer-link:hover {
+    color: grey;
+}
+
+.sub-cover-image {
+    border-radius: 10px;
+    min-width: 20px;
+    max-width:75%;
+}
+
+.center-vert {
+
+}
