@@ -48,3 +48,10 @@ body {
     min-width: 20px;
     max-width:75%;
 }
+
+/* Experimental sandbox elements */
+
+#text-of-image {
+    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg") !important;
+    -webkit-background-clip: text !important;
+}
