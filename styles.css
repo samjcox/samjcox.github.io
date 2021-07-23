@@ -16,9 +16,7 @@
 
 
 body {
-    text-shadow: 0 0.05rem 0.1rem rgb(0 0 0 / 50%);
     box-shadow: inset 0 0 5rem rgb(0 0 0 / 50%);
-    
 }
 
 .contact_button {
@@ -49,9 +47,106 @@ body {
     max-width:75%;
 }
 
+.box-border {
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
 /* Experimental sandbox elements */
 
-#text-of-image {
-    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg") !important;
-    -webkit-background-clip: text !important;
+.text-clip-image-1 {
+    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg");
+    background-attachment: fixed; /* This will carry the same background across all these elements.  Without this each element will have its own new background. */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* fall back colour of text if browser does not support webkit */
+    color: red;
+}
+
+.text-clip-image-2 {
+    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg");
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: 50% 50%;
+    /* fall back colour of text if browser does not support webkit */
+    color: red;
+}
+
+.text-clip-image-3 {
+    position: relative;
+    margin: 1em;
+    padding: .5em .75em;
+    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg");
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: 50% 50%;
+    /* fall back colour of text if browser does not support webkit */
+    color: red;
+}
+
+.text-clip-image-3:before,
+.text-clip-image-3:after
+{
+    position: absolute;
+    content: '';
+}
+
+/* The following 'before' selector creates the background image. */
+.text-clip-image-3:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg");
+    background-size: cover;
+    background-position: 50% 50%;   
+}
+
+/* The following 'after' selector creates the black box */
+.text-clip-image-3:after {
+    z-index: -1;
+    top: 0.75em;
+    right: .75em;
+    bottom: .75em;
+    left: .75em;
+    background-color: #000;
+    opacity: 0.75;
+}
+
+/* The following is related to the text itself (not the background behind the text) */
+.text-clip-image-4 {
+    position: relative;
+    margin: 1em;
+    padding: .5em .75em;
+    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg");
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: 0% 0%;
+    /* fall back colour of text if browser does not support webkit */
+    color: red;
+}
+
+.text-clip-image-4:before,
+.text-clip-image-4:after
+{
+    position: absolute;
+    content: '';
+}
+
+/* The following is relevant to the backgroun behind the text. */
+.text-clip-image-4:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
 }

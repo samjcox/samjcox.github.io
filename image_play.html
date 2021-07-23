@@ -65,43 +65,56 @@
                     <div class="col">
                         <h1 class="display-4">Image Play Sandbox</h1>
                         <h4><a href="sandbox.html">Return to Sandbox Contents</a></h4>
-                        <img class="sub-cover-image" src="sandbox.jpg" alt="Spade and bucket in sand">
-                            <h4 id="text-of-image">This is some test text just to test this feature.</h4>
-                            <h5 id="text-of-image">This is some test text just to test this feature.</h5>
-                            <p id="text-of-image">This is some test text just to test this feature.</p>
+                        <div class="box-border">
+                            <h4>Text Background Clip, scrollable</h4>
+                            <p>Scroll up/down and the background image will stay fixed.</p>
+                            <p style="font-size: 80px; font-weight: 900;" class="text-clip-image-1">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;" class="text-clip-image-1">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;" class="text-clip-image-1">TEST TEST</p>
                         </div>
-
-                    <!-- Right hand column (list of Sandbox contents) -->
-                    <div class="col">
-                            <h1 class="display-6">Holding text:</h1>
-                            <p>Holding text:</p>
-
-                        <!-- Button container to control button layout -->
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <a>Holding text</a>
+                        <div class="box-border">
+                            <h4>Text Background Clip, non-moving</h4>
+                            <p>The background will stay in the same position relative to the text, and the image is sized to match the cover. Using a new background per p element.</p>
+                            <p style="font-size: 80px; font-weight: 900;" class="text-clip-image-2">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;" class="text-clip-image-2">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;" class="text-clip-image-2">TEST TEST</p>
+                        </div>
+                        <div class="box-border">
+                            <h4>Text Background Clip, non-moving large</h4>
+                            <p>Now using a continuous background across multiple p elements.</p>
+                            <div class="text-clip-image-2">
+                            <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
                             </div>
                         </div>
-
-                        <!-- Email form to be added in the future -->
-                        <!-- 
-                        <p>If you want to be kept in the loop, leave your email address:</p>
-
-                        <form>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                <button type="submit" class="btn btn-secondary">Submit</button>
-                                </div>    
+                        <div class="box-border">
+                            <h4>Text Background Clip, multiple lines of small text</h4>
+                            <p>One continuous background across lots of small text.</p>
+                            <div class="text-clip-image-2">
+                            <p>TEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST TESTTEST</p>
                             </div>
-                        </form> -->
-
+                        </div>                        
+                        <div class="box-border">
+                            <h4>Text Background Clip, cut-out style</h4>
+                            <p>Now including a box around the text to look more like a cut-out style.</p>
+                            <div class="text-clip-image-3">
+                                <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                                <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                                <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                            </div>
+                        </div>
+                        <div class="box-border">
+                            <h4>Text Background Clip, offset images</h4>
+                            <p>Using the same image offset to differentiate text from background.</p>
+                            <div class="text-clip-image-4">
+                            <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                            <p style="font-size: 80px; font-weight: 900;">TEST TEST</p>
+                            </div>
+                        </div>                    
                     </div>
+
                 </div>
             </main>
 
