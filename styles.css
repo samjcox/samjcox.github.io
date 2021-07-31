@@ -39,13 +39,25 @@ body {
     margin-left: 0.5rem;
 }
 .footer-link:hover {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.general-link {
     color: grey;
+    text-decoration: none;
+}
+.general-link:hover {
+    color: white;
 }
 
 .sub-cover-image {
     border-radius: 10px;
     min-width: 20px;
-    max-width:75%;
+    max-width: 75%;
 }
 
 .box-border {
@@ -140,7 +152,7 @@ body {
     content: '';
 }
 
-/* The following is relevant to the backgroun behind the text. */
+/* The following is relevant to the background behind the text. */
 .text-clip-image-4:before {
     z-index: -2;
     top: 0;
