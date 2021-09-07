@@ -5,7 +5,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sandbox</title>
+        <title>Sandbox - Text Styles</title>
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -63,46 +63,83 @@
                 <div class="row">
                     <!-- Left hand column (warning message) -->
                     <div class="col">
-                        <h1 class="display-4">Welcome to the Sandbox</h1>
-                        <img class="sub-cover-image" src="sandbox.jpg" alt="Spade and bucket in sand">
-                            <h4>This area is for testing out ideas and breaking things...</h4>
-                            <h5>Feel free to look around, but don't expect everything to work!</h5>
-                    </div>
-
-                    <!-- Right hand column (list of Sandbox contents) -->
-                    <div class="col">
-                            <h1 class="display-6">Sandbox Contents:</h1>
-
-                        <!-- Container to control contents list -->
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <a class="general-link" href="image_play.html">Image Text Overlay</a>
-                                <a class="general-link" href="text_styles.html">Text Styles</a>
-                                <a>content to follow</a>
-                                <a>content to follow</a>
-                                <a>content to follow</a>
-                            </div>
+                        <h1 class="display-4">Text Styles</h1>
+                        <h4><a class="general-link" href="sandbox.html">Return to Sandbox Contents</a></h4>
+                        <div class="box-border">
+                            <h4>Typewriter effect, appending continually</h4>
+                            <button onclick="typeWriter()">Click me</button>
+                            <p>Click the button then text will appear below, one character at a time.  This instance will retain the existing text and continutally append to it on click.</p>
+                            <p id="typewriter-demo-1">Initial text that is retained.</p>
+                            <script>
+                                var count1 = 0;
+                                var txt1 = 'Lorem ipsum dummy text blabla.';
+                                var speed = 50;
+    
+                                function typeWriter() {
+                                if (count1 < txt1.length) {
+                                    document.getElementById("typewriter-demo-1").innerHTML += txt1.charAt(count1);
+                                    count1++;
+                                    setTimeout(typeWriter, speed);
+                                } else {
+                                    count1 = 0;
+                                }
+                                }                        
+                            </script>    
                         </div>
-
-                        <!-- Email form to be added in the future -->
-                        <!-- 
-                        <p>If you want to be kept in the loop, leave your email address:</p>
-
-                        <form>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                <button type="submit" class="btn btn-secondary">Submit</button>
-                                </div>    
-                            </div>
-                        </form> -->
-
+                        <div class="box-border">
+                            <h4>Typewriter effect, appending fresh</h4>
+                            <button onclick="typeWriter_appending()">Click me</button>
+                            <p>Click the button then text will appear below, one character at a time.  This instance will retain the existing text, only showing a maximum of the single text string.</p>
+                            <p id="typewriter-demo-3">Initial text that is retained.</p>
+                            <script>
+                                var originalText = 'Initial text that is retained.';
+                                var count3 = 0;
+                                var typewriterTxt = 'Lorem ipsum dummy text blabla.';
+                                var speed = 50;
+    
+                                function typeWriter_appending() {
+                                    document.getElementById("typewriter-demo-3").innerHTML = originalText;
+                                    text_to_appear();
+                                    function text_to_appear() {
+                                        if (count3 < typewriterTxt.length) {
+                                            document.getElementById("typewriter-demo-3").innerHTML += typewriterTxt.charAt(count3);
+                                            count3++;
+                                            setTimeout(text_to_appear, speed);
+                                        } else {
+                                            count3 = 0;
+                                        }
+                                    }   
+                                }                           
+                            </script>    
+                        </div>
+                        <div class="box-border">
+                            <h4>Typewriter effect, replacing</h4>
+                            <button onclick="typeWriter_overwriting()">Click me</button>
+                            <p>Click the button then text will appear below, one character at a time.  This instance will overwrite the existing text upon every click.</p>
+                            <p id="typewriter-demo-2">Initial text that will be replaced.</p>
+                            <script>
+                                var count2 = 0;
+                                var txt2 = 'Lorem ipsum dummy text blabla.';
+                                var speed = 50;
+                                
+                                function typeWriter_overwriting() {
+                                    document.getElementById("typewriter-demo-2").innerHTML = '';
+                                    text_to_appear();
+                                    function text_to_appear() {
+                                        if (count2 < txt2.length) {
+                                            document.getElementById("typewriter-demo-2").innerHTML += txt2.charAt(count2);
+                                            count2++;
+                                            setTimeout(text_to_appear, speed);
+                                        } else {
+                                            count2 = 0;
+                                        }
+                                        
+                                    }   
+                                }                     
+                            </script>                         
+                        </div>
                     </div>
+
                 </div>
             </main>
 
