@@ -29,7 +29,7 @@ body {
     text-decoration: none;
 }
 .main_header_link:hover {
-    color: white;
+    color: grey;
 }
 
 .footer-link {
@@ -52,6 +52,14 @@ body {
 }
 .general-link:hover {
     color: white;
+}
+
+.heading-link {
+    color: white;
+    text-decoration: none;
+}
+.heading-link:hover {
+    color: grey;
 }
 
 .sub-cover-image {
@@ -162,4 +170,16 @@ body {
     background: url("https://media.cntraveler.com/photos/57fea9ec8584f8cd20e65f15/16:9/w_1920%2Cc_limit/Aerial-One%26OnlyReethiRah-Maldives-CRHotel.jpg");
     background-size: cover;
     background-position: 50% 50%;
+}
+
+.gradient-text {
+    background-image: linear-gradient(
+        45deg,
+        #ff0a78,
+        #5773ff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
 }
